@@ -37,5 +37,15 @@ public class Animal {
     public String getType(String arg){
         return arg + TYPE;
     }
+    protected void toGo (){
+        System.out.println("Я умею бегать как " +  TYPE);
+    }
+    protected void fly (){
+        System.out.println("Я умею летать как " +  TYPE);
+       
+    }
+     protected void sweem (){
+        System.out.println("Я умею плавать как " + TYPE);
+    }
 
 }

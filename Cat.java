@@ -27,6 +27,15 @@ public class Cat extends Animal {
     eat ();
     sleep();
    }
+    @Override
+    public void fly() {
+       System.out.println(" Я не умею летать! Не нужно мной бросаться)))"); 
+    }
+
+     @Override
+    public void sweem() {
+       System.out.println(" Я не умею плавать! Держи меня подальше от воды"); 
+    }
 
 
 }
