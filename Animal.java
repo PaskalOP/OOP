@@ -1,5 +1,5 @@
 //Животное для вет. клиники
-public class Animal {
+public class Animal implements Ilable {
     protected String nameAnimal; // Кличка животного
     protected String ownerName; // Имя хозяина
     protected String diagnosis;
@@ -40,12 +40,13 @@ public class Animal {
     protected void toGo (){
         System.out.println("Я умею бегать как " +  TYPE);
     }
-    protected void fly (){
-        System.out.println("Я умею летать как " +  TYPE);
-       
-    }
+   
      protected void sweem (){
         System.out.println("Я умею плавать как " + TYPE);
+    }
+    @Override
+    public void ill() {
+        System.out.println("Животное болеет");
     }
 
 }

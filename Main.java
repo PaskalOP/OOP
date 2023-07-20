@@ -21,8 +21,8 @@ public class Main {
 
         System.out.println(cat);
 
-        Animal musya = new Cat();
-        Dog pes = new Dog();
+        Cat musya = new Cat();
+        Dog pes = new Dog("Ральф", "Василий Петрович", "здоров",true );
         List<Animal> animals = new ArrayList<>();
         animals.add(cat);
         animals.add(barsik);
@@ -32,21 +32,32 @@ public class Main {
         // System.out.println(musya.getType());
         // System.out.println(musya.getType("C arg "));
         // cat.hunt();
-        cat.toGo(); // вызывается из родительского класса
-        cat.fly(); // вызывается из переопределенного метода внутри класса Сat
-        cat.sweem(); // вызывается из переопределенного метода внутри класса Сat
-        System.out.println("___________________________");
-        Animal flyingFish = new FlyingFish();
-        flyingFish.fly();
-        flyingFish.toGo();
-        flyingFish.sweem();
-        System.out.println("___________________________");
-        Animal chicken = new Eagle();
-        chicken.fly();
-        chicken.toGo();
-        chicken.sweem();
-        String ownerEagle = chicken.ownerName = " Я вольная птица. У меня нет хозяина";
-        System.out.println(ownerEagle);
-        System.out.println("___________________________");
+        // cat.toGo(); // вызывается из родительского класса
+        // cat.fly(); // вызывается из переопределенного метода внутри класса Сat
+        // cat.sweem(); // вызывается из переопределенного метода внутри класса Сat
+        // System.out.println("___________________________");
+        // Animal flyingFish = new FlyingFish();
+        // flyingFish.fly();
+        // flyingFish.toGo();
+        // flyingFish.sweem();
+        // System.out.println("___________________________");
+        // Animal chicken = new Eagle();
+        // chicken.fly();
+        // chicken.toGo();
+        // chicken.sweem();
+        // String ownerEagle = chicken.ownerName = " Я вольная птица. У меня нет хозяина";
+        // System.out.println(ownerEagle);
+        // System.out.println("___________________________");
+
+        //Семинар 2
+        VetClinic clinic = new VetClinic();
+        clinic.addNewAnimal(pes).addNewAnimal(barsik);
+        
+        for (Animal animal: clinic.getAnimals()) {
+            animal.ill();
+        }
+        
+        musya.canRun(20);
+
     }
 }
